@@ -27,6 +27,19 @@ stream = tweepy.Stream(auth=api.auth, listener=stream_listener)
 
 # TODO: Add coordinates for primary on Saturday
 # In the future, do we want to parse from command line to make it easier to change (i.e., reuse a bash script in the future?)
-#coordinate_bounds = []
-#stream.filter(locations=[coordinate_bounds])
+
+# South Carolina coordinates (longitude then latitude like assignment):
+# I think this will work for multiple sets of coords... see https://github.com/shawn-terryah/Twitter_Geolocation
+
+coordinate_bound = [-83.014700, 35.003482, -83.033127, 34.630422,
+					-82.733977, 34.310211, -82.367124, 34.558319, 
+					-82.367124, 34.558319, -80.789655, 33.915363,
+					-81.875540, 33.884914, -81.031778, 33.304318, 
+					-81.031778, 33.304318, -81.442654, 32.892504,
+					-80.936396, 32.081770, -78.918704, 33.933627, 
+					-79.102130, 34.292028, -79.689095, 33.915363,
+					-79.689095, 33.915363, -80.863026, 34.805690]
+
+
+stream.filter(locations=coordinate_bounds)
 
