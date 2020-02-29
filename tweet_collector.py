@@ -18,7 +18,7 @@ class StreamListener(tweepy.StreamListener):
         # Currently this filters out all tweets that aren't in South Carolina based on the place name of the tweet
         if(status.place):
             if(state in status.place.full_name or state_abbrev in status.place.full_name):
-                print(status.text)
+                print(status.text.encode('utf-8'))
 
     def on_error(self, status_code):
         print(sys.stderr, 'Encountered error with status code:', status_code)
