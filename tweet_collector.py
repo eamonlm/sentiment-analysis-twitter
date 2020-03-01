@@ -1,5 +1,5 @@
 # tweet_collector.py
-''' This program is meant to collect tweets from certain geographic areas'''
+'''This program is meant to collect tweets from certain geographic areas'''
 
 import tweepy
 import sys
