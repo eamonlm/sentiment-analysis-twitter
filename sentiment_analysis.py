@@ -34,4 +34,5 @@ if __name__ == "__main__":
 
     # Display data
     for candidate in candidates:
-        print(candidate, candidates[candidate], candidates[candidate][0] / candidates[candidate][1])
+        print(candidate, candidates[candidate], candidates[candidate][0] / candidates[candidate][1]) 
+        # last one is overall_sentiment/Num tweets which shows oversll how mny positive mentions he is in percentwise 
