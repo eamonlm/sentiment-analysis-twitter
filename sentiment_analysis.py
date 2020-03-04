@@ -16,7 +16,7 @@ import numpy as np
 candidate_names = ["sanders", "warren", "buttigieg", "biden", "steyer", "klobuchar", "gabbard"]
 
 #File that contains Tweets
-file_name = ".txt"
+file_name = "south_carolina.txt"
 
 # Initializing Dict
 candidates = defaultdict(list)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     rects1 = ax.bar(x - width/2, sentimate_list, width)
 
-    ax.set_title('Score breakdown by cannadate in ' + file_name[:-3])
+    ax.set_title('Score breakdown by candidate in ' + file_name[:-3])
     ax.set_xticks(x)
     ax.set_xticklabels(candidate_names)
     ax.bar(candidate_names, sentimate_list)
