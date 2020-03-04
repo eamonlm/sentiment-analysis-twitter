@@ -40,8 +40,6 @@ def autolabel(rects):
                     textcoords="offset points",
                     ha='center', va='bottom')
 
-
-
 if __name__ == "__main__":
     # Gets sentiment of all relevant tweets, and adds it to the dictionary
     sentimate_list = []
@@ -53,8 +51,6 @@ if __name__ == "__main__":
                 candidates[candidate] = [overall_sentiment + sentiment_tweet(tweet), num_tweets + 1]
 
     # Display data
-
-
     for candidate in candidates:
         print(candidate, candidates[candidate], candidates[candidate][0] / candidates[candidate][1]) 
         sentimate_list.append(round(candidates[candidate][0],2))
