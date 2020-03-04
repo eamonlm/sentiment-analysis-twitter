@@ -15,6 +15,9 @@ import numpy as np
 # List of names to filter only relevant tweets
 candidate_names = ["sanders", "warren", "buttigieg", "biden", "steyer", "klobuchar", "gabbard"]
 
+#File that contains Tweets
+file_name = ".txt"
+
 # Initializing Dict
 candidates = defaultdict(list)
 for candidate in candidate_names:
@@ -42,7 +45,7 @@ def autolabel(rects):
 if __name__ == "__main__":
     # Gets sentiment of all relevant tweets, and adds it to the dictionary
     sentimate_list = []
-    for tweet in open("Tweets.txt"):
+    for tweet in open(file_name):
         for candidate in candidate_names:
             if candidate in tweet.lower():
                 overall_sentiment = candidates[candidate][0]
@@ -64,7 +67,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     rects1 = ax.bar(x - width/2, sentimate_list, width)
 
-    ax.set_title('Score breakdown by cannadate')
+    ax.set_title('Score breakdown by cannadate in ' + file_name[:-3])
     ax.set_xticks(x)
     ax.set_xticklabels(candidate_names)
     ax.bar(candidate_names, sentimate_list)
