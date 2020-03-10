@@ -6,4 +6,4 @@ and to be able to accurately predict winners of primaries/caucuses.
 
 
 To find bounding boxes for states used this tool:
-Maps⁠⁦‪boundingbox.klokantech.com‬⁩
+https://boundingbox.klokantech.com
