@@ -82,4 +82,4 @@ if __name__ == "__main__":
         ax.set_xticklabels(candidate_names)
         ax.bar(candidate_names, sentimate_list)
         autolabel(rects1)
-        plt.savefig(file_name + ".png")
+        plt.savefig("./Graphs/" + file_name + ".png")
