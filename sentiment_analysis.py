@@ -64,7 +64,7 @@ if __name__ == "__main__":
         for candidate in candidates:
             print(file_name)
             #print(candidate, candidates[candidate], candidates[candidate][0] / candidates[candidate][1]) 
-            print(candidate, candidates[candidate][2], candidates[candidate][3]) 
+            print(f"{candidate} [{candidates[candidate][2]},{candidates[candidate][3]}]") 
             print("\n")
 
             sentimate_list.append(round(candidates[candidate][0],2))
