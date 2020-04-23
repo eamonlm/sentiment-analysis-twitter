@@ -71,7 +71,7 @@ if __name__ == '__main__':
             ratings = words[2].strip().split(",")
             sa_data[state][candidate] += int(ratings[0][1:])
 
-    print(sa_data)
+    # print(sa_data)
 
     trump_total = 0
     biden_total = 0
